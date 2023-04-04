@@ -1,31 +1,12 @@
-<h1 align="center">github-hosted-pypi</h1>
+<h1 align="center">Canteen-Australia / pypi</h1>
 
 <p align="center">
-Make all your private packages accessible in one place<br>with this github-hosted PyPi index
+GitHub hosted PyPi index for Canteen Australia
 </p>
 
 ---
 
-<p align="center">
-  <a href="#description">Description</a> •
-  <a href="#try-it-">Try it !</a> •
-  <a href="#get-started">Get Started</a> •
-  <a href="#modify-indexed-packages">Modify indexed packages</a> •
-  <a href="#faq">FAQ</a> •
-  <a href="#a-word-about-supply-chain-attacks">A word about supply chain attacks</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#references">References</a>
-</p>
-
 ---
-
-## Features
-
-* **:octocat: Github-hosted**
-* **🚀 Template ready to deploy**
-* **🔆 Easy to use** through Github Actions
-* **🚨 Secure** : Warns you if your package is vulnerable to supply chain attacks
-
 ## Description
 
 This repository is a Github page used as a PyPi index, conform to [PEP503](https://www.python.org/dev/peps/pep-0503/).
@@ -38,13 +19,13 @@ _While the PyPi index is public, private packages indexed here are kept private 
 
 ## Try it !
 
-Visit [astariul.github.io/github-hosted-pypi/](http://astariul.github.io/github-hosted-pypi/) and try to install packages indexed there !
+Visit [canteen-australia.github.io/pypi/](https://canteen-australia.github.io/pypi/) and try to install packages indexed there !
 
 ---
 
 Try to install the package `public-hello` :
 ```console
-pip install public-hello --extra-index-url https://astariul.github.io/github-hosted-pypi/
+pip install public-hello --extra-index-url https://canteen-australia.github.io/pypi/
 ```
 
 It will also install the package `mydependency`, automatically ! 
@@ -59,29 +40,17 @@ print(hi())
 You can also install a specific version :
 
 ```console
-pip install public-hello==0.1 --extra-index-url https://astariul.github.io/github-hosted-pypi/
+pip install public-hello==0.1 --extra-index-url https://canteen-australia.github.io/pypi/
 ```
 
 ---
 
 Now try to install the package `private-hello` :
 ```console
-pip install private-hello --extra-index-url https://astariul.github.io/github-hosted-pypi/
+pip install private-hello --extra-index-url https://canteen-australia.github.io/pypi/
 ```
 
-_It will not work, because it's private and only me can access it !_
-
-## Get started
-
-* Use this template and create your own repository :
-
-<p align="center">
-  <a href="https://github.com/astariul/github-hosted-pypi/generate"><img src="https://img.shields.io/badge/%20-Use%20this%20template-green?style=for-the-badge&color=347d39" alt="Use template" /></a>
-</p>
-
-* Go to `Settings` of your repository, and enable Github Page
-* Customize `index.html` and `pkg_template.html` to your liking
-* You're ready to go ! Visit `<user>.github.io/<repo_name>` to see your PyPi index
+_It will not work, because it's private and only I can access it !_
 
 ## Modify indexed packages
 
@@ -205,20 +174,3 @@ You can see a demo of such warning at [https://astariul.github.io/github-hosted-
 If you see this warning, don't install the package ! Instead, change the name of your package or upgrade the version above its public counterpart.
 
 Be careful out there !
-
-## Contribute
-
-Issues and PR are welcome !
-
-If you come across anything weird / that can be improved, please get in touch !
-
-## References
-
-**This is greatly inspired from [this repository](https://github.com/ceddlyburge/python-package-server).**  
-It's just a glorified version, with cleaner pages and github actions for easily adding, updating and removing packages from your index.
-
-Also check the [blogpost](https://www.freecodecamp.org/news/how-to-use-github-as-a-pypi-server-1c3b0d07db2/) of the original author !
-
----
-
-_Icon used in the page was made by [Freepik](https://www.flaticon.com/authors/freepik) from [Flaticon](https://www.flaticon.com/)_
